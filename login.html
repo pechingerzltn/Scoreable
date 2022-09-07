@@ -16,7 +16,6 @@
             /*Add anti-aliasing for sexier fonts*/
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-
             /*set default font family*/
             font-family: 'Lato', sans-serif;
             }
@@ -32,34 +31,43 @@
             .text-orange-brand {
                 color: #ECAA19;
             }
+            .video {
+                object-fit: cover;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
         </style>
     </head>
 
     <body class="bg-grey-brand">
-        <div class="flex items-baseline pl-5 pt-5 text-[40px]">
-            <a href=""><h1 class="text-white font-extrabold">scoreable</h1></a>
-            <img class="pl-[6px]" src="./img/logo.svg" alt="logo" style="width: 30px;">
-        </div>
 
-        <div class="flex justify-center mt-[88px]">
-            <form class="bg-orange-brand max-w-md rounded-lg px-8 py-4">
-                <p class="text-[25px] font-light">Welcome back!</p>
-                <p class="text-[31px] font-medium">Log in to your account</p>
-                <label class="block text-[14px] my-2">Email or Username</label>
-                <input class="block w-full rounded-md py-2 px-3 text-[12px] text-gray-brand font-light" value="Enter your email or username" type="text">
-                <label class="block text-[14px] my-2">Password</label>
-                <input class="block w-full rounded-md py-2 px-3 text-[12px] text-gray-brand font-light" value="Enter your password" type="password">
-                <input class="bg-black text-white block w-full mt-4 py-2 text-[16px] font-medium rounded-md" type="submit" value="Login">
+        <header class="flex mx-auto justify-center py-6 z-1">
+            <a class="flex items-baseline px-4" href=""><h1 class="text-[40px] md:text-[50px] lg:text-[60px] inline text-white font-extrabold">scoreable</h1>
+                <img class="inline w-6 md:w-7 lg:w-8" src="./img/logo.svg" alt="logo"></a>
+        </header>
+
+        <div class="flex justify-center mx-auto my-auto w-auto">
+            <form class="bg-orange-brand rounded-lg p-4 w-10/12 h-auto md:w-6/12 lg:w-4/12">
+                <p class="font-light text-lg md:text-2xl mb-1">Welcome back!</p>
+                <p class="font-medium text-xl md:text-3xl mb-4">Log in to your account!</p>
+                <label class="block mb-1 md:text-lg">Email or Username</label>
+                <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" type="text" placeholder="Enter your email or username">
+                <label class="block pb-1 mt-3 md:text-lg">Password</label>
+                <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" placeholder="Enter your password" type="password">
+                <input class="bg-black text-white block w-full font-medium rounded-md p-2 mt-3 md:text-lg" type="submit" value="Login">
             </form>
         </div>
 
-        <div class="flex justify-center my-4">
-            <p class="text-white text-[16px] font-light">Don’t have an account? <a href="" class="text-orange-brand underline">Create</a> one or continue with</p>
+        <div class="align-center text-center m-4">
+            <p class="text-white font-light md:text-lg">Don’t have an account? <a href="" class="text-orange-brand underline">Create</a> one or continue with</p>
         </div>
         <div class="flex justify-center">
-            <input class="mx-2" type="image" src="./img/social-contact/facebook.svg" width="50px" height="50px"></input>
-            <input class="mx-2" type="image" src="./img/social-contact/google.svg" width="50px" height="50px"></input>
-            <input class="mx-2" type="image" src="./img/social-contact/apple.svg" width="50px" height="50px"></input>
+            <input class="mx-4" type="image" src="./img/social-contact/facebook.svg" width="50px" height="50px"></input>
+            <input class="mx-4" type="image" src="./img/social-contact/google.svg" width="50px" height="50px"></input>
+            <input class="mx-4" type="image" src="./img/social-contact/apple.svg" width="50px" height="50px"></input>
         <div>
     </body>
 </html>
