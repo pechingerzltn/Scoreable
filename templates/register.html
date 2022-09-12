@@ -45,8 +45,8 @@
     <body class="bg-grey-brand">
 
         <header class="flex mx-auto justify-center lg:justify-start py-6 z-1">
-            <a class="flex items-baseline px-4" href=""><h1 class="text-[40px] md:text-[30px] lg:text-[20px] inline text-white font-extrabold">scoreable</h1>
-                <img class="inline w-6 md:w-4 lg:w-3" src="./img/logo.svg" alt="logo"></a>
+            <a class="flex items-baseline px-4" href="{{url_for('home')}}"><h1 class="text-[40px] md:text-[30px] lg:text-[20px] inline text-white font-extrabold">scoreable</h1>
+                <img class="inline w-6 md:w-4 lg:w-3" src="../static/img/logo.svg" alt="logo"></a>
         </header>
 
         <div class="flex justify-center mx-auto lg:mx-20 my-auto w-auto">
@@ -62,11 +62,11 @@
                 <label class="block pb-1 mt-3 md:text-lg">Confirm Password</label>
                 <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" placeholder="Confirm your password" type="password">
                 <input class="bg-black text-white block w-full font-medium rounded-md p-2 mt-4 md:text-lg" type="submit" value="Register">
-                <p class="text-white text-center font-regular mx-auto mt-3 md:text-lg">Already have an account? <a href="./login.html" class="align-center text-black font-bold">Log in</a></p>
+                <p class="text-white text-center font-regular mx-auto mt-3 md:text-lg">Already have an account? <a href="{{url_for('login')}}" class="align-center text-black font-bold">Log in</a></p>
             </form>
             <div class="hidden lg:block align-center ml-20 lg:mt-20">
-                <img class="w-12/12" src="./img/register.svg">
-                <h1 class="text-white text-center text-3xl font-bold mt-6">Dive into the world of football analysis with scoreable!</h1>
+                <img class="w-12/12" src="../static/img/register.svg">
+                <h1 class="text-white text-center text-3xl font-bold mt-6">Dive into the world of football analytics with scoreable!</h1>
             </div>
         </div>
     </body>

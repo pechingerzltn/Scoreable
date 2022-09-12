@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            <div>
+                <a id="Log In" href="{{url_for('login')}}">Login</a>
+                <a id="Register" href="{{url_for('register')}}">SignUp</a>
+                <a id="Log Out" href="{{url_for('login')}}">Logout</a>
+                <a id="Home" href="{{url_for('home')}}">Home</a>
+            </div>
+        </div>
+        <!--<script>
+            type="text/javascript"
+            src="{{ url_for('static', filename='js/index.js')}}"
+        </script>-->
+    </body>
+</html>
