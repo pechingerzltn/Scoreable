@@ -49,18 +49,40 @@
                 <img class="inline w-6 md:w-4 lg:w-3" src="../static/img/logo.svg" alt="logo"></a>
         </header>
 
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages: %}
+            {% for category, message in messages: %}
+            {% if category == "error" %}
+            <div class="text-red-600" role="alert">
+                {{ message }}
+                <button type="button" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% else %}
+            <div class="text-green-600" role="alert">
+                {{ message }}
+                <button type="button" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
         <div class="flex justify-center mx-auto lg:mx-20 my-auto w-auto">
-            <form class="bg-orange-brand rounded-lg p-4 w-10/12 h-auto md:w-8/12 lg:w-6/12">
+            <form class="bg-orange-brand rounded-lg p-4 w-10/12 h-auto md:w-8/12 lg:w-6/12" method="post">
                 <p class="font-light text-lg md:text-2xl mb-1">Welcome!</p>
                 <p class="font-medium text-xl md:text-3xl mb-4">Signing up to scoreable is simple</p>
-                <label class="block mb-1 md:text-lg">Email</label>
-                <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" type="text" placeholder="Enter your email">
-                <label class="block mt-3 md:text-lg">Username</label>
-                <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" type="text" placeholder="Enter a username">
-                <label class="block pb-1 mt-3 md:text-lg">Password</label>
-                <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" placeholder="Enter your password" type="password">
-                <label class="block pb-1 mt-3 md:text-lg">Confirm Password</label>
-                <input class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" placeholder="Confirm your password" type="password">
+                <label for="email" class="block mb-1 md:text-lg">Email</label>
+                <input id="email" name="email" class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" type="email" placeholder="Enter your email">
+                <label for="username" class="block mt-3 md:text-lg">Username</label>
+                <input id="username" name="username" class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" type="text" placeholder="Enter a username">
+                <label for="password" class="block pb-1 mt-3 md:text-lg">Password</label>
+                <input id="password" name="password" class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" placeholder="Enter your password" type="password">
+                <label for="confirm_password" class="block pb-1 mt-3 md:text-lg">Confirm Password</label>
+                <input id="confirm_password" name="confirm-password" class="block w-full rounded-md text-gray-900 font-light p-2 md:text-lg" placeholder="Confirm your password" type="password">
                 <input class="bg-black text-white block w-full font-medium rounded-md p-2 mt-4 md:text-lg" type="submit" value="Register">
                 <p class="text-white text-center font-regular mx-auto mt-3 md:text-lg">Already have an account? <a href="{{url_for('login')}}" class="align-center text-black font-bold">Log in</a></p>
             </form>

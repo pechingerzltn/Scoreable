@@ -3,26 +3,94 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-        </style>
+
+        <!-- Font: Lato -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../static/css/index-style.css">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <title>Scoreable - Dive into football analysis!</title>
     </head>
     <body>
-        <div id="navbar">
-            <div>
-                <a id="Log In" href="{{url_for('login')}}">Login</a>
-                <a id="Register" href="{{url_for('register')}}">SignUp</a>
-                <a id="Log Out" href="{{url_for('login')}}">Logout</a>
-                <a id="Home" href="{{url_for('home')}}">Home</a>
+        <nav class="bg-black-brand text-white text-center align-center flex justify-between items-center
+        nav-shadow">
+            <div class="flex align-center text-center items-center text-lg">
+                <a class="bg-orange-brand font-extrabold text-3xl text-black p-3" href="#"><p class="inline">scoreable</p><img class="w-4 inline" src="../static/img/logo-white.svg" alt="logo"></a>
+                <a class="mx-4 p-2" href="#">Our mission</a>
+                <a class="mx-4 p-2" href="#">Partnerships</a>
+                <a class="mx-4 p-2" href="#">Services</a>
             </div>
-        </div>
-        <!--<script>
-            type="text/javascript"
-            src="{{ url_for('static', filename='js/index.js')}}"
-        </script>-->
+            <div class="flex align-center text-center items-center text-lg">
+                <input class="mx-4" type="text" placeholder="Search...">
+                <select id="select" class="mx-4" name="language" id="language">
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="Hungarian">Hungarian</option>
+                  </select>
+                <a class="mx-2 bg-light-grey-brand text-black rounded-full px-4 py-1" href="./login.html">Log in</a>
+                <a class="mx-2 bg-orange-brand text-white rounded-full px-4 py-1" href="./register.html">Sign Up</a>
+            </div>
+        </nav>
+        <section>
+            <article class="relative">
+                <div id="overlay-article">
+                    <h1 class="text-8xl font-md">Lorem Ipsum...</h1>
+                    <p class="text-5xl my-10 italic text-white font-light">"Neque porro quisquam est qui dolorem ipsum quia dolor
+                         sit amet, consectetur, adipisci velit..."</p>
+                    <p class="text-3xl my-8 font-md">Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit. Sed molestie diam lectus, sit 
+                        amet varius dolor convallis at.</p>
+                    <p class="text-5xl my-8 font-md">Mauris nec porta ex.</p>
+                </div>
+                <img id="slideshow-img" class="" src="../static/img/slideshow/chelsea.jpg" alt="slideshow-image">
+            </article>
+        </section>
+        <section id="info">
+            <div id="card-container" class="flex justify-center my-10 mx-20">
+                <div class="card mx-20 my-10">
+                    <img src="../static/img/leagues.jpg" alt="leagues">
+                    <p class="text-6xl mt-4 font-bold font-orange-light-brand">30</p>
+                    <p class="text-2xl mb-4 text-white p-2">Leagues covered 
+                        including a wide variety
+                        of competitions</p>
+                </div>
+                <div class="card mx-20 my-10">
+                    <img src="../static/img/partnership.jpg" alt="leagues">
+                    <p class="text-6xl mt-4 font-bold font-orange-light-brand">25</p>
+                    <p class="text-2xl mb-4 text-white p-2">Partnerships, including
+                        clubs and digital 
+                        media companies</p>
+                </div>
+                <div class="card mx-20 my-10">
+                    <img src="../static/img/analysis.jpeg" alt="leagues">
+                    <p class="text-6xl mt-4 font-bold font-orange-light-brand">10</p>
+                    <p class="text-2xl mb-4 text-white p-2">Custom, advanced
+                        statistical models
+                        for analysis</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <p class="text-white text-4xl text-center max-w-[60%] font-light">Massa ultricies mi quis hendrerit dolor magna eget est. 
+                    Tempor commodo ullamcorper a lacus vestibulum. 
+                    Turpis tincidunt id aliquet risus. 
+                    Ornare arcu dui vivamus arcu felis.</p>
+            </div>
+            <div class="flex justify-center mt-10 mb-20">
+                <a class="bg-orange-brand text-3xl font-bold px-6 py-4 rounded-full" href="./register.html">Sign up and choose your plan</a>
+            </div>
+        </section>
+
+        <footer class="bg-black-brand">
+            <div class="text-white">
+                <p>Social media</p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/index.js)}}"></script>
     </body>
 </html>
